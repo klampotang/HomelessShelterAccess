@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="1856.8" y="-806.44677661169419"/>
         </scene>
-        <!--View Controller-->
+        <!--Continue Sign Up View Controller-->
         <scene sceneID="2PO-Cf-TfX">
             <objects>
-                <viewController id="sPL-Iw-gvO" sceneMemberID="viewController">
+                <viewController id="sPL-Iw-gvO" customClass="ContinueSignUpViewController" customModule="SquarePassionProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Msb-Ef-UNM"/>
                         <viewControllerLayoutGuide type="bottom" id="0om-1X-IrE"/>
@@ -299,6 +299,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="X2Y-gS-kO5" kind="presentation" id="Q5s-JD-TB7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a usename - note that this will be displayed publicly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FT5-RD-q8x">
                                 <rect key="frame" x="16" y="107" width="343" height="21"/>
@@ -315,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="2684" y="-804.64767616191909"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="PtS-o6-EhZ">
             <objects>
-                <viewController id="RU8-nh-RhR" sceneMemberID="viewController">
+                <viewController id="RU8-nh-RhR" customClass="MainViewController" customModule="SquarePassionProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J8W-zp-mms"/>
                         <viewControllerLayoutGuide type="bottom" id="dXG-mI-d5L"/>
@@ -326,13 +329,70 @@
                     <view key="view" contentMode="scaleToFill" id="1rr-rX-w3j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="101-Lo-uKd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="291"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apply for Shelters"/>
+                                <connections>
+                                    <segue destination="JYu-hI-V7j" kind="show" id="xTo-YP-6Lt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-yw-Ajm">
+                                <rect key="frame" x="0.0" y="351" width="375" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="View Results">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dvQ-Q3-Bwa" kind="show" id="3Ud-A5-1Ux"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OUg-Kz-XFq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZG0-gp-kRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="-87.706146926536732"/>
+            <point key="canvasLocation" x="4868" y="-34.632683658170919"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6h6-6I-3v4">
+            <objects>
+                <viewController id="dvQ-Q3-Bwa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vwa-uw-svh"/>
+                        <viewControllerLayoutGuide type="bottom" id="mdO-3v-l5D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uS1-JI-e1L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S0q-WX-ANB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5685" y="454"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2Y8-ZB-ZIC">
+            <objects>
+                <viewController id="JYu-hI-V7j" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xIl-SP-u8G"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPC-EF-RVF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4wK-Rj-7ob">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yOa-70-F7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5693" y="-299"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wF8-2j-BhI">
@@ -350,10 +410,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKh-jL-wN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.8" y="-87.706146926536732"/>
+            <point key="canvasLocation" x="4094" y="-33"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="500" height="750"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q5s-JD-TB7"/>
+    </inferredMetricsTieBreakers>
 </document>
