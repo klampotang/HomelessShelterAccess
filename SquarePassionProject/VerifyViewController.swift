@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  VerifyViewController.swift
 //  SquarePassionProject
 //
 //  Created by Kelly Lampotang on 8/16/17.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoginViewController : UIViewController {
+class VerifyViewController : UIViewController {
     
 }
