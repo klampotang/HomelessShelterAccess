@@ -358,10 +358,10 @@
             </objects>
             <point key="canvasLocation" x="4868" y="-34.632683658170919"/>
         </scene>
-        <!--View Controller-->
+        <!--View Results View Controller-->
         <scene sceneID="6h6-6I-3v4">
             <objects>
-                <viewController id="dvQ-Q3-Bwa" sceneMemberID="viewController">
+                <viewController id="dvQ-Q3-Bwa" customClass="ViewResultsViewController" customModule="SquarePassionProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vwa-uw-svh"/>
                         <viewControllerLayoutGuide type="bottom" id="mdO-3v-l5D"/>
@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="5685" y="454"/>
         </scene>
-        <!--View Controller-->
+        <!--Apply View Controller-->
         <scene sceneID="2Y8-ZB-ZIC">
             <objects>
-                <viewController id="JYu-hI-V7j" sceneMemberID="viewController">
+                <viewController id="JYu-hI-V7j" customClass="ApplyViewController" customModule="SquarePassionProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xIl-SP-u8G"/>
                         <viewControllerLayoutGuide type="bottom" id="dPC-EF-RVF"/>
