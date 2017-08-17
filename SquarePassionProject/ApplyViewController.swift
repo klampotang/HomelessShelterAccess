@@ -89,10 +89,9 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         {
             // Get reference to the destination view controller
             let vc = segue.destination as! DetailViewController
-            let indexPath = tableView.indexPath(for: sender as! ShelterTableViewCell)
-            //Pass stuff
-            vc.addressLabel.text = shelterAddress[indexPath!.section]
-            vc.nameLabel.text = shelterNames[indexPath!.section]
+                let indexPath = tableView.indexPathForSelectedRow
+                vc.addressLabel.text = shelterAddress[indexPath!.section]
+                vc.nameLabel.text = shelterNames[indexPath!.section]            
         }
 
     }
