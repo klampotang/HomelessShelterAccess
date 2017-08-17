@@ -154,6 +154,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpClicked:" destination="sby-07-8Lt" eventType="touchUpInside" id="43E-tg-0eR"/>
                                     <segue destination="TcS-KZ-7xV" kind="show" id="dtT-4F-ASp"/>
                                 </connections>
                             </button>
@@ -167,6 +168,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="cMZ-Fq-TGY" id="avq-RP-dCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-vO-Sq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
