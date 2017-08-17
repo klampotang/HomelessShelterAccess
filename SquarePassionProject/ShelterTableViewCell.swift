@@ -34,7 +34,7 @@ class ShelterTableViewCell: UITableViewCell {
             selectButton.setTitle("Selected", for: .normal)
             selectedOrNot = true
         } else {
-            selectButton.backgroundColor = UIColor.blue
+            selectButton.backgroundColor = UIColor.blue //TODO
             selectButton.setTitle("Select", for: .normal)
             selectedOrNot = false
         }
