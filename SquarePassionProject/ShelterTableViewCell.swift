@@ -13,6 +13,9 @@ class ShelterTableViewCell: UITableViewCell {
     @IBOutlet weak var selectButton: UIButton!
     @IBOutlet weak var shelterNameLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    
+    var selectedOrNot = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,5 +28,16 @@ class ShelterTableViewCell: UITableViewCell {
     }
 
     @IBAction func selectButtonPressed(_ sender: Any) {
+        if(!selectedOrNot) {
+            selectButton.backgroundColor = UIColor.green
+            selectButton.titleLabel?.text = "Selected"
+            selectedOrNot = true
+        } else {
+            selectButton.backgroundColor = UIColor.blue
+            selectButton.titleLabel?.text = "Select"
+            selectedOrNot = false
+        }
+    }
+    @IBAction func detailsButtonPressed(_ sender: Any) {
     }
 }
