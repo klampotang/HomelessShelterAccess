@@ -569,7 +569,17 @@
                                 <state key="normal" title="Apply">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="applyButtonClicked:" destination="JYu-hI-V7j" eventType="touchUpInside" id="Bc7-Xi-Y9V"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success! You applied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9C-4Z-9zW">
+                                <rect key="frame" x="16" y="569" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select the charities you want to apply to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffL-iv-3LJ">
                                 <rect key="frame" x="9" y="97" width="350" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -581,6 +591,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="appliedSuccessLabel" destination="j9C-4Z-9zW" id="qQc-B9-vU9"/>
                         <outlet property="tableView" destination="2he-iA-RIx" id="uxn-cd-Uss"/>
                         <outlet property="zipcodeLabel" destination="xIP-kc-XQw" id="tZl-SZ-Pkd"/>
                     </connections>
