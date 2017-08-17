@@ -543,7 +543,7 @@
                                                     <state key="normal" title="See Details"/>
                                                     <connections>
                                                         <action selector="detailsButtonPressed:" destination="QRQ-Ma-87M" eventType="touchUpInside" id="KHH-35-ugr"/>
-                                                        <segue destination="g8v-jr-LTc" kind="show" id="TlY-ud-d7c"/>
+                                                        <segue destination="g8v-jr-LTc" kind="show" identifier="detailView" id="TlY-ud-d7c"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

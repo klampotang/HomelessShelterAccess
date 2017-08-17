@@ -78,21 +78,21 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
     }
+    
     @IBAction func applyButtonClicked(_ sender: Any) {
         appliedSuccessLabel.isHidden = false
-        
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Make sure your segue name in storyboard is the same as this line
         if (segue.identifier == "detailView")
         {
             // Get reference to the destination view controller
             let vc = segue.destination as! DetailViewController
+            let indexPath = tableView.indexPath(for: sender as! ShelterTableViewCell)
             //Pass stuff
-            //TODO
+            vc.addressLabel.text = shelterAddress[indexPath!.section]
+            vc.nameLabel.text = shelterNames[indexPath!.section]
         }
 
     }
