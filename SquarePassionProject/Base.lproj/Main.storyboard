@@ -99,12 +99,23 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="X2Y-gS-kO5" kind="presentation" id="dHK-bj-AtQ"/>
+                                    <action selector="loginButtonClicked:" destination="Qdj-IH-qVV" eventType="touchUpInside" id="P96-7X-hBc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rij-0x-t90">
+                                <rect key="frame" x="64" y="486" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="rij-0x-t90" id="5Ua-jc-AIU"/>
+                        <segue destination="X2Y-gS-kO5" kind="presentation" identifier="loginSuccess" id="krO-LR-FQE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmK-iq-nkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -602,6 +613,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QLO-O3-8df"/>
-        <segue reference="OAA-G7-7oX"/>
+        <segue reference="krO-LR-FQE"/>
     </inferredMetricsTieBreakers>
 </document>

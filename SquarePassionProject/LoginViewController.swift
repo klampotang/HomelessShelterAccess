@@ -9,9 +9,10 @@
 import UIKit
 
 class LoginViewController : UIViewController {
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        messageLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -20,5 +21,19 @@ class LoginViewController : UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func loginButtonClicked(_ sender: Any) {
+        //Check username
+        //TODO
+        if(false) {
+            messageLabel.text = "Incorrect login credentials"
+            messageLabel.isHidden = false
+        }
+        else {
+            messageLabel.text = "Success!"
+            messageLabel.isHidden = false
+            performSegue(withIdentifier: "loginSuccess", sender: self)
+        }
+    }
 
 }
