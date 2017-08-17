@@ -13,9 +13,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
+    
+    var addressText = ""
+    var nameText = ""
+    var phoneText = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameLabel.text = nameText
+        addressLabel.text = addressText
+        phoneLabel.text = phoneText
         // Do any additional setup after loading the view.
     }
 

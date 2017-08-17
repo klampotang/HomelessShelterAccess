@@ -550,6 +550,7 @@
                                             <outlet property="distanceLabel" destination="W4Y-d9-ZSX" id="1gZ-3t-5Zw"/>
                                             <outlet property="selectButton" destination="ugi-6o-aah" id="Zwu-TG-60A"/>
                                             <outlet property="shelterNameLabel" destination="uXI-i6-BIl" id="6na-xb-H1D"/>
+                                            <segue destination="g8v-jr-LTc" kind="show" identifier="detailView" id="oN6-LH-VQF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
