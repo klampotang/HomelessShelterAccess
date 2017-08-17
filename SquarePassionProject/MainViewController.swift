@@ -9,7 +9,6 @@
 import UIKit
 
 class MainViewController : UIViewController {
-    var posts: [[String: Any]] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
