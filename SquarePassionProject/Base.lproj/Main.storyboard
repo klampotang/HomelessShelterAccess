@@ -440,7 +440,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="QRQ-Ma-87M">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShelterTableViewCell" rowHeight="140" id="QRQ-Ma-87M" customClass="ShelterTableViewCell" customModule="SquarePassionProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QRQ-Ma-87M" id="8k6-dH-Tcn">
@@ -468,15 +468,26 @@
                                                     <state key="normal" title="Select">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="selectButtonPressed:" destination="QRQ-Ma-87M" eventType="touchUpInside" id="ws8-6p-pCJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="W4Y-d9-ZSX" id="1gZ-3t-5Zw"/>
+                                            <outlet property="selectButton" destination="ugi-6o-aah" id="Zwu-TG-60A"/>
+                                            <outlet property="shelterNameLabel" destination="uXI-i6-BIl" id="6na-xb-H1D"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2he-iA-RIx" id="uxn-cd-Uss"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOa-70-F7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

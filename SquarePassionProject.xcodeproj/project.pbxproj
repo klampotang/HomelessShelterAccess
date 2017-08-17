@@ -21,6 +21,7 @@
 		8A3A10B01F4509B90063CEA8 /* ContinueSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10AF1F4509B90063CEA8 /* ContinueSignUpViewController.swift */; };
 		8A3A10B21F450A4B0063CEA8 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10B11F450A4B0063CEA8 /* ApplyViewController.swift */; };
 		8A3A10B41F450A550063CEA8 /* ViewResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10B31F450A550063CEA8 /* ViewResultsViewController.swift */; };
+		8A3A10B71F45D4890063CEA8 /* ShelterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10B61F45D4890063CEA8 /* ShelterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		8A3A10AF1F4509B90063CEA8 /* ContinueSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContinueSignUpViewController.swift; sourceTree = "<group>"; };
 		8A3A10B11F450A4B0063CEA8 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
 		8A3A10B31F450A550063CEA8 /* ViewResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewResultsViewController.swift; sourceTree = "<group>"; };
+		8A3A10B61F45D4890063CEA8 /* ShelterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		8A3A10751F44FBBF0063CEA8 /* SquarePassionProject */ = {
 			isa = PBXGroup;
 			children = (
+				8A3A10B51F45D4740063CEA8 /* CustomViews */,
 				8A3A10A81F44FC120063CEA8 /* ViewControllers */,
 				8A3A10761F44FBBF0063CEA8 /* AppDelegate.swift */,
 				8A3A107A1F44FBBF0063CEA8 /* Main.storyboard */,
@@ -152,6 +155,14 @@
 				8A3A10B31F450A550063CEA8 /* ViewResultsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A3A10B51F45D4740063CEA8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A3A10B61F45D4890063CEA8 /* ShelterTableViewCell.swift */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 				8A3A10AC1F4505240063CEA8 /* VerifyViewController.swift in Sources */,
 				8A3A10A51F44FBEB0063CEA8 /* WelcomeViewController.swift in Sources */,
 				8A3A10B41F450A550063CEA8 /* ViewResultsViewController.swift in Sources */,
+				8A3A10B71F45D4890063CEA8 /* ShelterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
