@@ -25,9 +25,6 @@ class SignUpViewController : UIViewController {
     
     
     @IBAction func signUpClicked(_ sender: Any) {
-        print("Tapped button")
-        
-        // Use your own details here
         let twilioSID = "AC31323c9576c6980b49737681b9490847"
         let twilioSecret = "e1e48c719b8bbd106347517ac055dadc"
         let fromNumber = "3525759069"
