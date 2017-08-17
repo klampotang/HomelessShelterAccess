@@ -30,11 +30,11 @@ class ShelterTableViewCell: UITableViewCell {
     @IBAction func selectButtonPressed(_ sender: Any) {
         if(!selectedOrNot) {
             selectButton.backgroundColor = UIColor.green
-            selectButton.titleLabel?.text = "Selected"
+            selectButton.setTitle("Selected", for: .normal)
             selectedOrNot = true
         } else {
             selectButton.backgroundColor = UIColor.blue
-            selectButton.titleLabel?.text = "Select"
+            selectButton.setTitle("Select", for: .normal)
             selectedOrNot = false
         }
     }
