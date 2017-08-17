@@ -12,13 +12,14 @@ import CoreLocation
 class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     var shelterNames: [String] = ["Odyssey Villas Intact Families", "The Salvation Army Metro Atlanta Red Shield Service", "Serenity House of Atlanta", "The Shepherd's Inn Downtown Atlanta Homeless Shelter", "Atlanta Union Mission", "Fuqua Hall Transitional Housing", "Gateway Center Atlanta"]
     var shelterAddress: [String] = ["625 Spencer Street NW, Atlanta, GA 30318", "469 Marietta Street, Atlanta, GA 30313", "Atlanta, GA, 30314", "165 Ivan Allen Blvd NW, Atlanta, GA 30313", "165 Alexander Street NW, Atlanta, GA 30301", "144 Mills Street, Atlanta, GA 30313", "275 Pryor St., SW, Atlanta, GA 30303"]
+    var selected : [Bool] = [false, false, false, false, false, false, false]
     var applied : [Bool] = [false, false, false, false, false, false, false]
     
     @IBOutlet weak var zipcodeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var appliedSuccessLabel: UILabel!
     let locationManager = CLLocationManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -42,6 +43,7 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShelterTableViewCell") as! ShelterTableViewCell
         cell.shelterNameLabel.text = shelterNames[indexPath.row]
         cell.distanceLabel.text = shelterAddress[indexPath.row]
+        
         return cell
     }
     
@@ -80,6 +82,16 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func applyButtonClicked(_ sender: Any) {
+        var i = 0;
+        for cell in tableView.visibleCells {
+            i += 1
+            let customCell = cell as! ShelterTableViewCell
+            selected[i] = customCell.selectedOrNot
+            if(selected[i] == true) {
+                customCell.selectButton.setTitle("Applied", for: .normal)
+            }
+        }
+        
         appliedSuccessLabel.isHidden = false
     }
     
@@ -96,6 +108,9 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
 
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selected[indexPath.row] = !selected[indexPath.row]
     }
     
 }

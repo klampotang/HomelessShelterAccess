@@ -23,6 +23,9 @@ class DetailViewController: UIViewController {
         nameLabel.text = nameText
         addressLabel.text = addressText
         phoneLabel.text = phoneText
+        nameLabel.adjustsFontSizeToFitWidth = true
+        addressLabel.adjustsFontSizeToFitWidth = true
+        phoneLabel.adjustsFontSizeToFitWidth = true
         // Do any additional setup after loading the view.
     }
 

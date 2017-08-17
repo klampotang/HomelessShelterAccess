@@ -18,6 +18,7 @@ class ShelterTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = UITableViewCellSelectionStyle.none
         // Initialization code
         shelterNameLabel.adjustsFontSizeToFitWidth = true
         distanceLabel.adjustsFontSizeToFitWidth = true
