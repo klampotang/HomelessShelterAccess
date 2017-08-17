@@ -29,7 +29,6 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShelterTableViewCell") as! ShelterTableViewCell
-        cell.textLabel?.text = "This is row \(indexPath.row)"
         
         return cell
     }
