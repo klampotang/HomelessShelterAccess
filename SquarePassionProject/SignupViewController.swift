@@ -32,7 +32,7 @@ class SignUpViewController : UIViewController {
         let twilioSecret = "e1e48c719b8bbd106347517ac055dadc"
         let fromNumber = "3525759069"
         let toNumber = "3528712319"
-        let message = "Hey"
+        let message = "Your Verification number is 1276"
         
         // Build the request
         let request = NSMutableURLRequest(url: NSURL(string:"https://\(twilioSID):\(twilioSecret)@api.twilio.com/2010-04-01/Accounts/\(twilioSID)/SMS/Messages")! as URL)

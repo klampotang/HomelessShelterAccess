@@ -206,11 +206,17 @@
                                 <rect key="frame" x="85" y="294" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Resend verification number"/>
+                                <connections>
+                                    <action selector="resendCode:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="xlW-V5-SsX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4U-Wk-rA1">
                                 <rect key="frame" x="72" y="340" width="241" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Receive a call to verify instead"/>
+                                <connections>
+                                    <action selector="chooseCall:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="6Gi-yB-bZZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error! This was the wrong number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGa-gU-89r">
                                 <rect key="frame" x="35" y="247" width="314" height="21"/>
@@ -228,12 +234,26 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sPL-Iw-gvO" kind="presentation" id="c90-OI-6GB"/>
+                                    <action selector="clickedVerify:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="hN3-w7-w2x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-pq-pgo">
+                                <rect key="frame" x="85" y="388" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset phone number"/>
+                                <connections>
+                                    <action selector="resetNumber:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="XOH-da-obP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="enteredVerificationNumber" destination="wD2-wC-xbT" id="htb-VD-GXh"/>
+                        <outlet property="errorMessageLabel" destination="wGa-gU-89r" id="QOG-hr-qui"/>
+                        <segue destination="sPL-Iw-gvO" kind="presentation" identifier="verifiedSuccess" id="WrK-9A-Ko3"/>
+                        <segue destination="sby-07-8Lt" kind="presentation" identifier="backToNumber" id="4ja-fn-pGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWB-qA-G4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,6 +489,7 @@
         <image name="Background" width="500" height="750"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4ja-fn-pGT"/>
         <segue reference="Q5s-JD-TB7"/>
     </inferredMetricsTieBreakers>
 </document>

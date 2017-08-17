@@ -9,9 +9,11 @@
 import UIKit
 
 class VerifyViewController : UIViewController {
+    @IBOutlet weak var enteredVerificationNumber: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        errorMessageLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -20,16 +22,23 @@ class VerifyViewController : UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    @IBAction func clickedVerify(_ sender: Any) {
+        let enteredNumber = enteredVerificationNumber.text
+        if (enteredNumber == "1276") {
+            errorMessageLabel.text = "Success!"
+            errorMessageLabel.isHidden = false
+            performSegue(withIdentifier: "verifiedSuccess", sender: self)
+        } else {
+            errorMessageLabel.isHidden = false
+        }
+    }
+    @IBAction func resendCode(_ sender: Any) {
+    }
 
+    @IBAction func chooseCall(_ sender: Any) {
+        
+    }
+    @IBAction func resetNumber(_ sender: Any) {
+        performSegue(withIdentifier: "backToNumber", sender: self)
+    }
 }
