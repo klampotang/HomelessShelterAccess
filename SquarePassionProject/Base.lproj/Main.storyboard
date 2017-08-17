@@ -324,7 +324,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="X2Y-gS-kO5" kind="presentation" id="Q5s-JD-TB7"/>
+                                    <action selector="continueButtonPressed:" destination="sPL-Iw-gvO" eventType="touchUpInside" id="imG-ym-lbZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a usename - note that this will be displayed publicly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FT5-RD-q8x">
@@ -334,9 +334,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error! Passwords are not the same" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAx-oG-Z1I">
+                                <rect key="frame" x="16" y="435" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="dv8-e8-3yF" id="uBZ-t3-mCx"/>
+                        <outlet property="confirmPasswordTextField" destination="ulr-HC-0Zs" id="Woy-GK-dW3"/>
+                        <outlet property="errorLabel" destination="dAx-oG-Z1I" id="WKg-Sv-PeB"/>
+                        <outlet property="genderSegmentedControl" destination="vgK-PH-rjp" id="gND-Da-Y2J"/>
+                        <outlet property="passwordTextField" destination="aaH-k7-4pY" id="S5x-DC-z3l"/>
+                        <outlet property="usernameTextField" destination="ovw-sJ-nZe" id="fXE-s0-OVN"/>
+                        <segue destination="X2Y-gS-kO5" kind="presentation" identifier="goToMain" id="OAA-G7-7oX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIo-Mx-0KY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,6 +506,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4ja-fn-pGT"/>
-        <segue reference="Q5s-JD-TB7"/>
+        <segue reference="OAA-G7-7oX"/>
     </inferredMetricsTieBreakers>
 </document>
