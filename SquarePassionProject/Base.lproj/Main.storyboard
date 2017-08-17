@@ -93,7 +93,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL6-8Y-yxa">
                                 <rect key="frame" x="0.0" y="598" width="375" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,7 +139,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEQ-Js-o8a">
                                 <rect key="frame" x="63" y="376" width="249" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +148,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvd-4p-amR">
                                 <rect key="frame" x="290" y="220" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,7 +205,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-uD-ZfC">
                                 <rect key="frame" x="85" y="294" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.37981417012850693" green="0.60624981530805377" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Resend verification number"/>
                                 <connections>
                                     <action selector="resendCode:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="xlW-V5-SsX"/>
@@ -214,7 +214,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4U-Wk-rA1">
                                 <rect key="frame" x="72" y="340" width="241" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.37981417010000001" green="0.60624981529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Receive a call to verify instead"/>
                                 <connections>
                                     <action selector="chooseCall:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="6Gi-yB-bZZ"/>
@@ -242,7 +242,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-pq-pgo">
                                 <rect key="frame" x="85" y="388" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.37981417010000001" green="0.60624981529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Reset phone number"/>
                                 <connections>
                                     <action selector="resetNumber:" destination="TcS-KZ-7xV" eventType="touchUpInside" id="XOH-da-obP"/>
@@ -317,7 +317,7 @@
                                     <segment title="Female"/>
                                     <segment title="Prefer Not to Say"/>
                                 </segments>
-                                <color key="tintColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.37981417010000001" green="0.60624981529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qd-hg-4Ed">
                                 <rect key="frame" x="0.0" y="585" width="375" height="82"/>
@@ -378,7 +378,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Apply for Shelters">
-                                    <color key="titleColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.37981417010000001" green="0.60624981529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="JYu-hI-V7j" kind="show" id="xTo-YP-6Lt"/>
@@ -517,7 +517,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugi-6o-aah">
                                                     <rect key="frame" x="291" y="31" width="64" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Select">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -528,6 +528,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwz-ks-7hI">
                                                     <rect key="frame" x="20" y="101" width="96" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" red="0.37981417010000001" green="0.60624981529999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="See Details"/>
                                                     <connections>
                                                         <action selector="detailsButtonPressed:" destination="QRQ-Ma-87M" eventType="touchUpInside" id="KHH-35-ugr"/>
@@ -553,7 +554,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nty-Zn-zx0">
                                 <rect key="frame" x="0.0" y="594" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.80784313730000001" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Apply">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -600,7 +601,7 @@
         <image name="Logo" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4ja-fn-pGT"/>
+        <segue reference="QLO-O3-8df"/>
         <segue reference="OAA-G7-7oX"/>
     </inferredMetricsTieBreakers>
 </document>
