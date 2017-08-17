@@ -45,6 +45,7 @@ class ContinueSignUpViewController: UIViewController {
             age = ageTextField.text
             performSegue(withIdentifier: "goToMain", sender: self)
         } else {
+            errorLabel.text = "Passwords entered do not match"
             errorLabel.isHidden = false
         }
     }
