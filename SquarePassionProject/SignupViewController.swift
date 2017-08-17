@@ -37,6 +37,7 @@ class SignUpViewController : UIViewController {
         request.httpBody = "From=\(fromNumber)&To=\(toNumber)&Body=\(message)".data(using: String.Encoding.utf8)
         
         // Build the completion block and send the request
+        /*
         URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
             print("Finished")
             if let data = data, let responseDetails = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
@@ -47,6 +48,7 @@ class SignUpViewController : UIViewController {
                 print("Error: \(error)")
             }
         }).resume()
+ */
     }
     
 
