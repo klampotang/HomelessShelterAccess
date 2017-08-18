@@ -29,7 +29,8 @@ class LoginViewController : UIViewController {
     @IBAction func loginButtonClicked(_ sender: Any) {
         //Check username
         //TODO
-        let usernameKey = usernameTextField.text! + "Username"
+        let usernametextfieldlowercase = usernameTextField.text?.lowercased()
+        let usernameKey = usernametextfieldlowercase! + "Username"
         let passwordReal = defaults.string(forKey: usernameKey)
         if(passwordReal != passwordTextField.text) {
             messageLabel.text = "Incorrect login credentials"
