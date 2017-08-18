@@ -664,6 +664,13 @@
                                     <action selector="applyButtonPressed:" destination="g8v-jr-LTc" eventType="touchUpInside" id="w22-Ws-HQe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5W-ai-Klg">
+                                <rect key="frame" x="29" y="328" width="308" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="callPhoneClicked:" destination="g8v-jr-LTc" eventType="touchUpInside" id="YSB-ME-lKM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

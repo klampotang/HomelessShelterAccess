@@ -37,5 +37,10 @@ class DetailViewController: UIViewController {
     @IBAction func applyButtonPressed(_ sender: Any) {
         
     }
+    @IBAction func callPhoneClicked(_ sender: Any) {
+        print("Call clicked")
+        let number = phoneText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
+    }
 
 }

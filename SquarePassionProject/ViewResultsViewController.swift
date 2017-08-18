@@ -14,8 +14,9 @@ class ViewResultsViewController: UIViewController {
     @IBOutlet weak var result2: UILabel!
     @IBOutlet weak var tbdLabel: UILabel!
     var winningNumber1 = -1
-    var winningNumber2 = -1
     var waitlistNumber3 = -1
+    var arrayOfTBDShelters = [String]()
+    var arrayTBDIndices = [Int]()
     @IBOutlet weak var waitlistLabel: UILabel!
     var resultsReleasedAt : [Int] = [12, 2, 1, 3, 3, 4, 5]
     var appliedShelters : [Bool]?
@@ -46,14 +47,10 @@ class ViewResultsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func randomlyChoose() {
-        winningNumber1 = generateRandomNumber(min: 0, max: 6)
-        winningNumber2 = winningNumber1
-        while(winningNumber2 == winningNumber1) {
-            winningNumber2 = generateRandomNumber(min: 0, max: 6)
-        }
-        waitlistNumber3 = winningNumber2
-        while(waitlistNumber3 == winningNumber2) {
-            waitlistNumber3 = generateRandomNumber(min: 0, max: 6)
+        winningNumber1 = generateRandomNumber(min: 0, max: 2)
+        waitlistNumber3 = winningNumber1
+        while(waitlistNumber3 == winningNumber1) {
+            waitlistNumber3 = generateRandomNumber(min: 0, max: 2)
         }
         
     }
@@ -72,8 +69,6 @@ class ViewResultsViewController: UIViewController {
         for i in 0 ..< shelterNames.count {
             if(i == winningNumber1) {
                 result1.text = shelterNames[winningNumber1]
-            } else if(i == winningNumber2) {
-                result2.text = shelterNames[winningNumber2]
             }
         }
     }
@@ -82,12 +77,12 @@ class ViewResultsViewController: UIViewController {
         return randomNum
     }
     func displayNotYetResults() {
-        var arrayOfTBDShelters = [String]()
         for i in 0 ..< resultsReleasedAt.count {
             if(resultsReleasedAt[i] > hour && (appliedShelters?[i])!) {
                 //Display this in the not yet released:
+                arrayTBDIndices.append(i)
                 let timeAsString = String(resultsReleasedAt[i])
-                arrayOfTBDShelters.append(shelterNames[i] + " available at " + timeAsString)
+                arrayOfTBDShelters.append(shelterNames[i] + " available at " + timeAsString + ".")
             }
         }
         var tbdString = ""
@@ -97,5 +92,13 @@ class ViewResultsViewController: UIViewController {
         }
         tbdLabel.text = tbdString
         tbdLabel.adjustsFontSizeToFitWidth = true
+    }
+    func checkIfTBDNumber(number: Int) -> Bool {
+        for val in arrayTBDIndices {
+            if(number == val) {
+                return true
+            }
+        }
+        return false
     }
 }
