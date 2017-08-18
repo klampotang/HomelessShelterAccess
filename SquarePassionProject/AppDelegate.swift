@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let applied : [Bool] = [false, false, false, false, false, false, false]
+        let defaults = UserDefaults.standard
+        defaults.set(applied, forKey: "SavedApplied")
+        defaults.synchronize()
         return true
     }
 

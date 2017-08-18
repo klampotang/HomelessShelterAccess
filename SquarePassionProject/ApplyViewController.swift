@@ -29,6 +29,9 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         appliedSuccessLabel.isHidden = true
+        let defaults = UserDefaults.standard
+        applied = defaults.array(forKey: "SavedApplied") as? [Bool] ?? [Bool]()
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,12 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShelterTableViewCell") as! ShelterTableViewCell
         cell.shelterNameLabel.text = shelterNames[indexPath.row]
         cell.distanceLabel.text = shelterAddress[indexPath.row]
-        
+        let defaults = UserDefaults.standard
+        applied = defaults.array(forKey: "SavedApplied") as? [Bool] ?? [Bool]()
+        if(applied[indexPath.row]) {
+            cell.selectButton.setTitle("Applied", for: .normal)
+            cell.selectButton.backgroundColor = UIColor.green
+        }
         return cell
     }
     
@@ -82,16 +90,25 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @IBAction func applyButtonClicked(_ sender: Any) {
-        var i = 0;
+        var i = 0
+        
         for cell in tableView.visibleCells {
-            i += 1
             let customCell = cell as! ShelterTableViewCell
             selected[i] = customCell.selectedOrNot
             if(selected[i] == true) {
                 customCell.selectButton.setTitle("Applied", for: .normal)
+                applied[i] = true
             }
+            else {
+                applied[i] = false
+            }
+            i += 1
         }
-        
+        i = 0
+        tableView.reloadData()
+        let defaults = UserDefaults.standard
+        defaults.set(applied, forKey: "SavedApplied")
+        defaults.synchronize()
         appliedSuccessLabel.isHidden = false
     }
     
