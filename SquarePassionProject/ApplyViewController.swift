@@ -125,12 +125,11 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
             // Get reference to the destination view controller
             let vc = segue.destination as! DetailViewController
             if let indexPath = tableView.indexPathForSelectedRow {
-                // do the work here
-                vc.addressText = shelterAddress[indexPath.section]
-                vc.nameText = shelterNames[indexPath.section]
-                vc.phoneText = phoneNumbers[indexPath.section]
-                vc.latitude = CLLocationDegrees(latitudes[indexPath.section])
-                vc.longitude = CLLocationDegrees(longitudes[indexPath.section])
+                vc.addressText = shelterAddress[indexPath.row]
+                vc.nameText = shelterNames[indexPath.row]
+                vc.phoneText = phoneNumbers[indexPath.row]
+                vc.latitude = CLLocationDegrees(latitudes[indexPath.row])
+                vc.longitude = CLLocationDegrees(longitudes[indexPath.row])
 
             }
         }
