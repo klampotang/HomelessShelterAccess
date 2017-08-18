@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class DetailViewController: UIViewController {
 
@@ -17,7 +18,8 @@ class DetailViewController: UIViewController {
     var addressText = ""
     var nameText = ""
     var phoneText = ""
-    
+    var latitude:CLLocationDegrees = 0
+    var longitude:CLLocationDegrees = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = nameText
@@ -34,6 +36,9 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func openInMapsButtonClicked(_ sender: Any) {
+        openInMaps()
+    }
     @IBAction func applyButtonPressed(_ sender: Any) {
         
     }
@@ -42,6 +47,20 @@ class DetailViewController: UIViewController {
         let number = phoneText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         print(number)
         UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
+    }
+    func openInMaps() {
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = nameText
+        mapItem.openInMaps(launchOptions: options)
     }
 
 }

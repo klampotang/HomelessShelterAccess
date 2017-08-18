@@ -43,10 +43,7 @@ class LoginViewController : UIViewController {
             
             self.welcomeLabel.text = self.welcomeStrings[self.count%self.welcomeStrings.count]
             self.count+=1
-            // Fade in
-            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
-                self.welcomeLabel.alpha = 0.0
-            }, completion: nil)
+            
         })
 
     }

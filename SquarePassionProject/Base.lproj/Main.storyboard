@@ -118,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aB-gF-PVD">
-                                <rect key="frame" x="85" y="225" width="204" height="21"/>
+                                <rect key="frame" x="16" y="225" width="343" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -199,6 +199,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up with your Phone Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uq-EE-WIq">
+                                <rect key="frame" x="16" y="112" width="343" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -207,13 +214,15 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="loginFacebookButton" destination="yEQ-Js-o8a" id="2qp-QQ-o5e"/>
+                        <outlet property="orLabel" destination="HLY-fW-8d8" id="7i5-a1-sYy"/>
                         <outlet property="phoneNumberTextField" destination="cMZ-Fq-TGY" id="avq-RP-dCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-vO-Sq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="N1q-RD-Xdk"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="-613"/>
+            <point key="canvasLocation" x="1064.8" y="-613.04347826086962"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="lEp-fo-KeG">
@@ -554,7 +563,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QRQ-Ma-87M" id="8k6-dH-Tcn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shelter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXI-i6-BIl">
@@ -694,6 +703,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="callPhoneClicked:" destination="g8v-jr-LTc" eventType="touchUpInside" id="YSB-ME-lKM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G8-lQ-Cd9">
+                                <rect key="frame" x="29" y="383" width="174" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open in Maps"/>
+                                <connections>
+                                    <action selector="openInMapsButtonClicked:" destination="g8v-jr-LTc" eventType="touchUpInside" id="auq-fi-vgI"/>
                                 </connections>
                             </button>
                         </subviews>

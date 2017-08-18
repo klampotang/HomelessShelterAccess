@@ -11,14 +11,29 @@ import UIKit
 class SignUpViewController : UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var loginFacebookButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.orLabel.alpha = 0.0
+        self.loginFacebookButton.alpha = 0.0
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.orLabel.alpha = 1.0
+            self.loginFacebookButton.alpha = 1.0
+        }, completion: {
+            (finished: Bool) -> Void in
+            
+            // Fade in
+            UIView.animate(withDuration: 3.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                self.orLabel.alpha = 1.0
+                self.loginFacebookButton.alpha = 1.0
+            }, completion: nil)
+        })
+
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -43,7 +58,7 @@ class SignUpViewController : UIViewController {
         request.httpBody = "From=\(fromNumber)&To=\(toNumber)&Body=\(message)".data(using: String.Encoding.utf8)
         
         // Build the completion block and send the request
-        /*
+        
         URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
             print("Finished")
             if let data = data, let responseDetails = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
@@ -54,7 +69,7 @@ class SignUpViewController : UIViewController {
                 print("Error: \(error)")
             }
         }).resume()
- */
+ 
     }
     
 
