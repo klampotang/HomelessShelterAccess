@@ -12,6 +12,7 @@ import CoreLocation
 class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     var shelterNames: [String] = ["Odyssey Villas Intact Families", "The Salvation Army Metro Atlanta Red Shield Service", "Serenity House of Atlanta", "The Shepherd's Inn Downtown Atlanta Homeless Shelter", "Atlanta Union Mission", "Fuqua Hall Transitional Housing", "Gateway Center Atlanta"]
     var shelterAddress: [String] = ["625 Spencer Street NW, Atlanta, GA 30318", "469 Marietta Street, Atlanta, GA 30313", "Atlanta, GA, 30314", "165 Ivan Allen Blvd NW, Atlanta, GA 30313", "165 Alexander Street NW, Atlanta, GA 30301", "144 Mills Street, Atlanta, GA 30313", "275 Pryor St., SW, Atlanta, GA 30303"]
+    var phoneNumbers: [String] = ["(404) 671-3570", "(404) 486-2700", "(844) 473-7364", "(404) 367-2493", "(404) 367-2493", "(404) 367-2492", "(404) 215-6600"]
     var resultsReleasedAt : [Int] = [3, 2, 1, 3, 3, 4, 5]
     var selected : [Bool] = [false, false, false, false, false, false, false]
     var applied : [Bool] = [false, false, false, false, false, false, false]
@@ -124,6 +125,7 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
                 // do the work here
                 vc.addressText = shelterAddress[indexPath.section]
                 vc.nameText = shelterNames[indexPath.section]
+                vc.phoneText = phoneNumbers[indexPath.section]
             }
         }
 

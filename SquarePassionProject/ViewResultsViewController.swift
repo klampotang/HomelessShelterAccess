@@ -62,7 +62,8 @@ class ViewResultsViewController: UIViewController {
         for i in 0 ..< shelterNames.count {
             if(i == waitlistNumber3) {
                 waitlistString += shelterNames[i]
-                waitlistString += " "
+                let waitlistValue = ": (You are spot " + String(generateRandomNumber(min: 2, max: 40)) + " on the waitlist)"
+                waitlistString += waitlistValue
             }
         }
         waitlistLabel.text = waitlistString
