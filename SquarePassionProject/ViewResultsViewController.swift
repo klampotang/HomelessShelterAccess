@@ -35,6 +35,8 @@ class ViewResultsViewController: UIViewController {
             hour = hour-12
         }
         randomlyChoose()
+        displayChosen()
+        displayWaitlist()
         displayNotYetResults()
         // Do any additional setup after loading the view.
     }
@@ -56,10 +58,24 @@ class ViewResultsViewController: UIViewController {
         
     }
     func displayWaitlist() {
-        
+        var waitlistString = ""
+        for i in 0 ..< shelterNames.count {
+            if(i == waitlistNumber3) {
+                waitlistString += " "
+                waitlistString += shelterNames[i]
+                waitlistString += " "
+            }
+        }
+        waitlistLabel.text = waitlistString
     }
     func displayChosen() {
-        
+        for i in 0 ..< shelterNames.count {
+            if(i == winningNumber1) {
+                result1.text = shelterNames[winningNumber1]
+            } else if(i == winningNumber2) {
+                result2.text = shelterNames[winningNumber2]
+            }
+        }
     }
     func generateRandomNumber(min: Int, max: Int) -> Int {
         let randomNum = Int(arc4random_uniform(UInt32(max) - UInt32(min)) + UInt32(min))
@@ -80,5 +96,6 @@ class ViewResultsViewController: UIViewController {
             tbdString += val
         }
         tbdLabel.text = tbdString
+        tbdLabel.adjustsFontSizeToFitWidth = true
     }
 }
