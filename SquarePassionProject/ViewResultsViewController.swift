@@ -13,6 +13,9 @@ class ViewResultsViewController: UIViewController {
     @IBOutlet weak var result1: UILabel!
     @IBOutlet weak var result2: UILabel!
     @IBOutlet weak var tbdLabel: UILabel!
+    var winningNumber1 = -1
+    var winningNumber2 = -1
+    var waitlistNumber3 = -1
     @IBOutlet weak var waitlistLabel: UILabel!
     var resultsReleasedAt : [Int] = [12, 2, 1, 3, 3, 4, 5]
     var appliedShelters : [Bool]?
@@ -31,6 +34,7 @@ class ViewResultsViewController: UIViewController {
         if(hour > 12) {
             hour = hour-12
         }
+        randomlyChoose()
         displayNotYetResults()
         // Do any additional setup after loading the view.
     }
@@ -39,12 +43,27 @@ class ViewResultsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func randomlyChoose() {
+        winningNumber1 = generateRandomNumber(min: 0, max: 6)
+        winningNumber2 = winningNumber1
+        while(winningNumber2 == winningNumber1) {
+            winningNumber2 = generateRandomNumber(min: 0, max: 6)
+        }
+        waitlistNumber3 = winningNumber2
+        while(waitlistNumber3 == winningNumber2) {
+            waitlistNumber3 = generateRandomNumber(min: 0, max: 6)
+        }
+        
+    }
     func displayWaitlist() {
         
     }
     func displayChosen() {
         
+    }
+    func generateRandomNumber(min: Int, max: Int) -> Int {
+        let randomNum = Int(arc4random_uniform(UInt32(max) - UInt32(min)) + UInt32(min))
+        return randomNum
     }
     func displayNotYetResults() {
         var arrayOfTBDShelters = [String]()
