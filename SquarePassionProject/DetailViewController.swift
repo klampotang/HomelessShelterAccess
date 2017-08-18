@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
     @IBAction func callPhoneClicked(_ sender: Any) {
         print("Call clicked")
         let number = phoneText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        print(number)
         UIApplication.shared.open(URL(string: "tel://" + number)!, options: [:], completionHandler: nil)
     }
 

@@ -119,6 +119,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Y8N-gC-8me" appends="YES" id="zxJ-RN-EhO"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="rij-0x-t90" id="5Ua-jc-AIU"/>
@@ -128,6 +132,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmK-iq-nkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Y8N-gC-8me"/>
             </objects>
             <point key="canvasLocation" x="1884" y="269.41529235382313"/>
         </scene>
@@ -188,14 +193,19 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="N1q-RD-Xdk" appends="YES" id="34G-Ei-RFQ"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="phoneNumberTextField" destination="cMZ-Fq-TGY" id="avq-RP-dCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-vO-Sq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="N1q-RD-Xdk"/>
             </objects>
-            <point key="canvasLocation" x="1871.2" y="-436.73163418290858"/>
+            <point key="canvasLocation" x="1065" y="-613"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="lEp-fo-KeG">
@@ -271,6 +281,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cnE-sq-SXe" appends="YES" id="qP1-eh-hbX"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="enteredVerificationNumber" destination="wD2-wC-xbT" id="htb-VD-GXh"/>
@@ -280,6 +294,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWB-qA-G4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cnE-sq-SXe"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="-806.44677661169419"/>
         </scene>
@@ -368,6 +383,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PI2-OU-7Ec" appends="YES" id="ztn-Kq-U4g"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="dv8-e8-3yF" id="uBZ-t3-mCx"/>
@@ -380,6 +399,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIo-Mx-0KY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PI2-OU-7Ec"/>
             </objects>
             <point key="canvasLocation" x="2684" y="-804.64767616191909"/>
         </scene>
@@ -725,7 +745,7 @@
         <image name="Logo" width="1536" height="1536"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OAA-G7-7oX"/>
         <segue reference="QLO-O3-8df"/>
-        <segue reference="krO-LR-FQE"/>
     </inferredMetricsTieBreakers>
 </document>
