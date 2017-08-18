@@ -43,6 +43,12 @@ class ContinueSignUpViewController: UIViewController {
             username = usernameTextField.text
             password = passwordTextField.text
             age = ageTextField.text
+            let defaults = UserDefaults.standard
+            let usernameKey = username! + "Username"
+            //Save password
+            defaults.set(password, forKey: usernameKey)
+            defaults.synchronize()
+            
             performSegue(withIdentifier: "goToMain", sender: self)
         } else {
             errorLabel.text = "Passwords entered do not match"
