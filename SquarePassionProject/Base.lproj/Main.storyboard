@@ -115,6 +115,8 @@
                     </view>
                     <connections>
                         <outlet property="messageLabel" destination="rij-0x-t90" id="5Ua-jc-AIU"/>
+                        <outlet property="passwordTextField" destination="zrT-Yl-V1C" id="Wqy-EW-hZ3"/>
+                        <outlet property="usernameTextField" destination="DHp-Al-Kcl" id="dxH-dD-nHL"/>
                         <segue destination="X2Y-gS-kO5" kind="presentation" identifier="loginSuccess" id="krO-LR-FQE"/>
                     </connections>
                 </viewController>

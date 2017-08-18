@@ -51,11 +51,12 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         if(applied[indexPath.row]) {
             cell.selectButton.setTitle("Applied", for: .normal)
             cell.selectButton.backgroundColor = UIColor.green
+            cell.selectButton.isEnabled = false
         }
         return cell
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: Error!) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error){
         print("Error while updating location " + error.localizedDescription)
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -9,7 +9,11 @@
 import UIKit
 
 class LoginViewController : UIViewController {
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var usernameTextField: UITextField!
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.isHidden = true
@@ -25,7 +29,9 @@ class LoginViewController : UIViewController {
     @IBAction func loginButtonClicked(_ sender: Any) {
         //Check username
         //TODO
-        if(false) {
+        let usernameKey = usernameTextField.text! + "Username"
+        let passwordReal = defaults.string(forKey: usernameKey)
+        if(passwordReal != passwordTextField.text) {
             messageLabel.text = "Incorrect login credentials"
             messageLabel.isHidden = false
         }
