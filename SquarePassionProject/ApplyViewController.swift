@@ -27,6 +27,8 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         tableView.delegate = self
         tableView.dataSource = self
         locationManager.delegate = self
@@ -38,7 +40,10 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
         applied = defaults.array(forKey: "SavedApplied") as? [Bool] ?? [Bool]()
         tableView.reloadData()
     }
-
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -22,6 +22,8 @@ class ShelterTableViewCell: UITableViewCell {
         // Initialization code
         shelterNameLabel.adjustsFontSizeToFitWidth = true
         distanceLabel.adjustsFontSizeToFitWidth = true
+        selectButton.layer.cornerRadius = 0.5*selectButton.bounds.size.width
+        selectButton.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

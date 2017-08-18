@@ -25,6 +25,7 @@
 		8A3A10B91F4602820063CEA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10B81F4602820063CEA8 /* DetailViewController.swift */; };
 		8A3A10BB1F46885A0063CEA8 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A10BA1F46885A0063CEA8 /* ResultsTableViewCell.swift */; };
 		8A4BD6091F47228E0041BB52 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD6081F47228E0041BB52 /* FAQViewController.swift */; };
+		8A4BD60B1F472BAD0041BB52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4BD60A1F472BAD0041BB52 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8A3A10B81F4602820063CEA8 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8A3A10BA1F46885A0063CEA8 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		8A4BD6081F47228E0041BB52 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		8A4BD60A1F472BAD0041BB52 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				8A3A10B31F450A550063CEA8 /* ViewResultsViewController.swift */,
 				8A3A10B81F4602820063CEA8 /* DetailViewController.swift */,
 				8A4BD6081F47228E0041BB52 /* FAQViewController.swift */,
+				8A4BD60A1F472BAD0041BB52 /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				8A3A10A71F44FC070063CEA8 /* LoginViewController.swift in Sources */,
 				8A3A10BB1F46885A0063CEA8 /* ResultsTableViewCell.swift in Sources */,
 				8A3A10B21F450A4B0063CEA8 /* ApplyViewController.swift in Sources */,
+				8A4BD60B1F472BAD0041BB52 /* ProfileViewController.swift in Sources */,
 				8A4BD6091F47228E0041BB52 /* FAQViewController.swift in Sources */,
 				8A3A10771F44FBBF0063CEA8 /* AppDelegate.swift in Sources */,
 				8A3A10B01F4509B90063CEA8 /* ContinueSignUpViewController.swift in Sources */,

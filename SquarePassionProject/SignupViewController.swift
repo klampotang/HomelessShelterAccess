@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpViewController : UIViewController {
     
+    @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var loginFacebookButton: UIButton!
@@ -33,6 +34,10 @@ class SignUpViewController : UIViewController {
                 self.loginFacebookButton.alpha = 1.0
             }, completion: nil)
         })
+        signupButton.layer.cornerRadius = 10
+        signupButton.clipsToBounds = true
+        loginFacebookButton.layer.cornerRadius = 10
+        loginFacebookButton.clipsToBounds = true
 
     }
     func dismissKeyboard() {
