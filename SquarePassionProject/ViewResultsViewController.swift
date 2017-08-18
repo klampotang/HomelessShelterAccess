@@ -39,12 +39,20 @@ class ViewResultsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func displayWaitlist() {
+        
+    }
+    func displayChosen() {
+        
+    }
     func displayNotYetResults() {
         var arrayOfTBDShelters = [String]()
         for i in 0 ..< resultsReleasedAt.count {
             if(resultsReleasedAt[i] > hour && (appliedShelters?[i])!) {
                 //Display this in the not yet released:
-                arrayOfTBDShelters.append(shelterNames[i])
+                let timeAsString = String(resultsReleasedAt[i])
+                arrayOfTBDShelters.append(shelterNames[i] + " available at " + timeAsString)
             }
         }
         var tbdString = ""
