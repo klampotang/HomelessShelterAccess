@@ -61,7 +61,6 @@ class ViewResultsViewController: UIViewController {
         var waitlistString = ""
         for i in 0 ..< shelterNames.count {
             if(i == waitlistNumber3) {
-                waitlistString += " "
                 waitlistString += shelterNames[i]
                 waitlistString += " "
             }
@@ -92,8 +91,8 @@ class ViewResultsViewController: UIViewController {
         }
         var tbdString = ""
         for val in arrayOfTBDShelters {
-            tbdString += " "
             tbdString += val
+            tbdString += " "
         }
         tbdLabel.text = tbdString
         tbdLabel.adjustsFontSizeToFitWidth = true
