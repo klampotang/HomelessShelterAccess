@@ -14,7 +14,7 @@ class ViewResultsViewController: UIViewController {
     @IBOutlet weak var result2: UILabel!
     @IBOutlet weak var tbdLabel: UILabel!
     @IBOutlet weak var waitlistLabel: UILabel!
-    var resultsReleasedAt : [Int] = [3, 2, 1, 3, 3, 4, 5]
+    var resultsReleasedAt : [Int] = [12, 2, 1, 3, 3, 4, 5]
     var appliedShelters : [Bool]?
     var shelterNames: [String] = ["Odyssey Villas Intact Families", "The Salvation Army Metro Atlanta Red Shield Service", "Serenity House of Atlanta", "The Shepherd's Inn Downtown Atlanta Homeless Shelter", "Atlanta Union Mission", "Fuqua Hall Transitional Housing", "Gateway Center Atlanta"]
     var shelterAddress: [String] = ["625 Spencer Street NW, Atlanta, GA 30318", "469 Marietta Street, Atlanta, GA 30313", "Atlanta, GA, 30314", "165 Ivan Allen Blvd NW, Atlanta, GA 30313", "165 Alexander Street NW, Atlanta, GA 30301", "144 Mills Street, Atlanta, GA 30313", "275 Pryor St., SW, Atlanta, GA 30303"]
@@ -28,7 +28,10 @@ class ViewResultsViewController: UIViewController {
         let calendar = Calendar.current
         
         hour = calendar.component(.hour, from: date)
-        
+        if(hour > 12) {
+            hour = hour-12
+        }
+        displayNotYetResults()
         // Do any additional setup after loading the view.
     }
 
@@ -44,5 +47,11 @@ class ViewResultsViewController: UIViewController {
                 arrayOfTBDShelters.append(shelterNames[i])
             }
         }
+        var tbdString = ""
+        for val in arrayOfTBDShelters {
+            tbdString += " "
+            tbdString += val
+        }
+        tbdLabel.text = tbdString
     }
 }
