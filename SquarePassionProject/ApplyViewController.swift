@@ -27,8 +27,6 @@ class ApplyViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
         tableView.delegate = self
         tableView.dataSource = self
         locationManager.delegate = self
